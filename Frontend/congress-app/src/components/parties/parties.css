@@ -1,0 +1,201 @@
+.partiesContainer {  
+    margin: 20px auto;
+    width: 80%;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 12px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "republicanParty independentParty democraticParty";
+}
+
+
+.partiesContainer > div {
+    background-color: rgb(23, 24, 28);
+    border: 1px solid #22252a;
+    
+    height: 100%;
+
+    border-radius: 10px;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.11),0 2px 2px 0 rgba(0,0,0,.11),0 3px 4px 0 rgba(0,0,0,.11),0 4px 6px 0 rgba(0,0,0,.11),0 4px 10px 0 rgba(0,0,0,.11),0 6px 16px 0 rgba(0,0,0,.11);
+
+    margin: auto 0;
+}
+
+.republicanContainer {
+    grid-area: republicanParty;
+    background: linear-gradient(to top left, rgba(150, 16, 16, .5) 10%, rgba(159, 36, 36, .5) 20%, rgba(108, 42, 42, .5) 30%, rgba(23, 24, 28, .5) 50%);
+}
+
+.independentContainer {
+    grid-area: independentParty;
+    background: linear-gradient(to top left, rgba(128, 16, 150, .5) 10%, rgba(96, 26, 110, .5) 20%, rgba(67, 29, 74, .5) 30%, rgba(23, 24, 28, .5) 50%);
+}
+
+.democraticContainer {
+    grid-area: democraticParty;
+    background: linear-gradient(to top left, rgba(24, 108, 234, .5) 10%, rgba(49, 84, 137, .5) 20%, rgba(39, 54, 76, .5) 30%, rgba(23, 24, 28, .5) 50%);
+}
+
+.republicanContainer:hover {
+    border: 1px solid #961010;
+    box-shadow: 0 2px 2px #961010;
+    background: linear-gradient(to top left, rgba(150, 16, 16, 1) 10%, rgba(159, 36, 36, 1) 20%, rgba(108, 42, 42, 1), rgb(13, 14, 15) 50%);
+}
+
+.independentContainer:hover {
+    border: 1px solid #801096;
+    box-shadow: 0 2px 2px #801096;
+    background: linear-gradient(to top left, rgba(128, 16, 150, .5) 10%, rgba(96, 26, 110, .5) 20%, rgba(67, 29, 74, .5) 30%, rgb(13, 14, 15) 50%);
+}
+
+.democraticContainer:hover {
+    border: 1px solid #186CEA;
+    box-shadow: 0 2px 2px #186CEA;
+    background: linear-gradient(to top left, rgba(24, 108, 234, 1) 10%, rgba(49, 84, 137, 1) 20%, rgba(39, 54, 76, 1) 30%, rgb(13, 14, 15) 50%);
+}
+
+.partyHeader {
+    margin: 5% auto;
+}
+
+.partyHeader > h1 {
+    font-size: 1.75rem;
+    color: white;
+    text-align: center;
+}
+
+.partyInformation {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.partyCard {
+    background-color: #23252a;
+    border: 1px solid #2e3238;
+    border-radius: 6px;
+    
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 10%; 
+    padding: 1.5%;
+}
+
+
+.partyCard h3 {
+    margin: 2.5% auto;
+    color: white;
+    text-align: center;
+}
+
+.partyCard h4 {
+    margin: 0 auto;
+    color: #969696;
+    text-align: center;
+}
+
+.memberInformation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 12px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "totalMembers totalMembers"
+      "senators representatives";
+
+}
+
+.totalMembers {
+    grid-area: totalMembers;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.senators {
+    grid-area: senators;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.representatives {
+    grid-area: representatives;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.votingInformation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 24px 12px;
+    grid-template-areas: "sponsoredBills cosponsoredBills";
+}
+
+.votingInformation .sponsoredBills {
+    grid-area: sponsoredBills;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.votingInformation .cosponsoredBills {
+    grid-area: cosponsoredBills;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.fundingInformation {
+}
+
+.donationsCard {
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.donationsCard > h3 {
+    font-size: .75rem;
+}
+
+.donationsCard > h4 {
+    font-size: .5rem;
+}
+
+.totalDonations {
+    grid-area: totalDonations;
+}
+
+.totalDonationAmount {
+    grid-area: totalDonationAmount;
+}
+
+.amountPerDonation {
+    grid-area: amountPerDonation;
+}
+
+.totalIndDonations {
+    grid-area: totalIndDonations;
+}
+
+.totalIndDonationAmount {
+    grid-area: totalIndDonationAmount;
+}
+
+.amountPerIndDonation {
+    grid-area: amoutPerIndDonation;
+}

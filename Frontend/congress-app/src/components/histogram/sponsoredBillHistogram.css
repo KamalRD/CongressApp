@@ -1,0 +1,28 @@
+.sponsoredContainer {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sponsoredHeader > h3 {
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+}
+
+.sponsoredPopup {
+    background-color: #23252a;
+    border: 1px solid #2e3238;
+    border-radius: 6px;
+    width: 90%;
+    margin: 5% auto;
+    padding: 2.5%;
+}
+
+.sponsoredPopup > h3 {
+    font-size: .8rem;
+    color: white;
+    text-align: center;
+}

@@ -1,0 +1,157 @@
+.stateContainer {  
+    padding-bottom: 10%;
+    margin: 20px auto;
+    width: 80%;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 24px 12px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "stateInformation billSponsorshipInfo billSponsorshipInfo"
+      "donationsHistogram donationsHistogram donationsDonut";
+}
+  
+.stateContainer > div {
+    background-color: rgb(23, 24, 28);
+    border: 1px solid #22252a;
+    
+    height: 450px;
+
+    border-radius: 10px;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.11),0 2px 2px 0 rgba(0,0,0,.11),0 3px 4px 0 rgba(0,0,0,.11),0 4px 6px 0 rgba(0,0,0,.11),0 4px 10px 0 rgba(0,0,0,.11),0 6px 16px 0 rgba(0,0,0,.11);
+
+    margin: auto 0;
+}
+ 
+.stateInfoContainer {
+    grid-area: stateInformation;
+}
+
+.billHistogramContainer {
+    grid-area: billSponsorshipInfo;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.donationsHistogramContainer {
+    grid-area: donationsHistogram;
+}
+
+.donationDonutContainer {
+    grid-area: donationsDonut;
+}
+
+.statePoliticians {
+    grid-area: stateRepresentatives;
+}
+
+.stateGeography {
+    margin: 20% auto;
+    text-align: center;
+}
+
+.stateGeography > h1 {
+    font-size: 1.75rem;
+    color: white;
+    margin: 0;
+}
+
+.stateGeography > h2 {
+    font-size: 1.25rem;
+    color: #969696;
+}
+
+.stateSpecifics {
+    margin: 20px auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 12px 12px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "stateSenators stateHouseMembers"
+      "billSponsorCount billCosponsorCount";
+}
+
+.stateSenators {
+    grid-area: stateSenators;
+    text-align: center;
+}
+
+.stateSenators > h3 {
+    font-size: 1rem;
+    color: white;
+
+    margin: 0;
+}
+
+.stateSenators > h4 {
+    font-size: .75rem;
+    color:#969696;
+
+    margin: 10% auto;
+}
+
+.stateHouseMembers {
+    grid-area: stateHouseMembers;
+    text-align: center;
+}
+
+.stateHouseMembers > h3 {
+    font-size: 1rem;
+    color:white;
+
+    margin: 0;
+}
+
+.stateHouseMembers > h4 {
+    font-size: .75rem;
+    color:#969696;
+
+    margin: 10% auto;
+}
+
+.billSponsorCount {
+    grid-area: billSponsorCount;
+    text-align: center;
+}
+
+.billSponsorCount > h3 {
+    font-size: 1rem;
+    color:white;
+
+    margin: 0;
+}
+
+.billSponsorCount > h4 {
+    font-size: .75rem;
+    color:#969696;
+
+    margin: 10% auto;
+}
+
+.billCosponsorCount {
+    grid-area: billCosponsorCount;
+    text-align: center;
+}
+
+.billCosponsorCount > h3 {
+    font-size: 1rem;
+    color:white;
+
+    margin: 0;
+}
+
+.billCosponsorCount > h4 {
+    font-size: .75rem;
+    color:#969696;
+
+    margin: 10% auto;
+}

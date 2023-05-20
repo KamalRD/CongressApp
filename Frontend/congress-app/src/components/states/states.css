@@ -1,0 +1,121 @@
+.stateTitle {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10%;
+}
+
+.stateTitle h1 {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.cardsContainer {
+    width: 80vw;
+    height: 100%;
+    
+    margin: 0 auto;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+    gap: 16px 16px;
+
+    padding-bottom: 5%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.stateCardContainer {  
+    width: 320px;
+    height: 55px;
+
+    border-radius: 6px;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.11),0 2px 2px 0 rgba(0,0,0,.11),0 3px 4px 0 rgba(0,0,0,.11),0 4px 6px 0 rgba(0,0,0,.11),0 4px 10px 0 rgba(0,0,0,.11),0 6px 16px 0 rgba(0,0,0,.11);
+
+    color: #e3e5e8;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.stateCardContainer.Democratic {
+    background: linear-gradient(to top left, rgba(24, 108, 234, .5) 10%, rgba(49, 84, 137, .5) 20%, rgba(39, 54, 76, .5) 30%, rgba(23, 24, 28, .5) 50%);
+}
+
+.stateCardContainer.Republican {
+    background: linear-gradient(to top left, rgba(150, 16, 16, .5) 10%, rgba(159, 36, 36, .5) 20%, rgba(108, 42, 42, .5) 30%, rgba(23, 24, 28, .5) 50%);
+}
+
+.stateCardContainer.Neutral {
+    background: linear-gradient(to top left, rgba(128, 16, 150, .5) 10%, rgba(96, 26, 110, .5) 20%, rgba(67, 29, 74, .5) 30%, rgba(23, 24, 28, .5) 50%);
+}
+
+.stateCardContainer.Democratic:hover {
+    border: 1px solid #186CEA;
+    box-shadow: 0 2px 2px #186CEA;
+    background: linear-gradient(to top left, rgba(24, 108, 234, 1) 10%, rgba(49, 84, 137, 1) 20%, rgba(39, 54, 76, 1) 30%, rgb(13, 14, 15) 50%);
+}
+
+.stateCardContainer.Republican:hover {
+    border: 1px solid #961010;
+    box-shadow: 0 2px 2px #961010;
+    background: linear-gradient(to top left, rgba(150, 16, 16, 1) 10%, rgba(159, 36, 36, 1) 20%, rgba(108, 42, 42, 1), rgb(13, 14, 15) 50%);
+}
+
+.stateCardContainer.Neutral:hover {
+    border: 1px solid #801096;
+    box-shadow: 0 2px 2px #801096;
+    background: linear-gradient(to top left, rgba(128, 16, 150, .5) 10%, rgba(96, 26, 110, .5) 20%, rgba(67, 29, 74, .5) 30%, rgb(13, 14, 15) 50%);
+}
+
+.stateName {
+    margin: auto 0;
+    text-align: center;
+}
+
+.stateName > h2 {
+    font-size: .75rem;
+    font-weight: 600;
+}
+
+.statesSenators {
+    display: flex;
+    flex-direction: column;
+
+    margin: auto 0;
+}
+
+.statesSenators > h4 {
+    font-size: .5rem;
+    
+    margin: auto 0;
+}
+
+.statesSenators > h3 {
+    font-size: .75rem;
+
+    margin: auto auto;
+}
+
+.statesRepresentatives {
+    display: flex;
+    flex-direction: column;
+
+    margin: auto 0;
+}
+
+.statesRepresentatives > h4 {
+    font-size: .5rem;
+    
+    margin: auto 0;
+}
+
+.statesRepresentatives > h3 {
+    font-size: .75rem;
+    text-align: center;
+
+    margin: auto auto;
+}

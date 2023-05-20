@@ -1,0 +1,9 @@
+.donutContainer {
+    margin: 5% auto;
+}
+
+.donutContainer > h3 {
+    font-size: 1.25rem;
+    color: white;
+    text-align: center;
+}

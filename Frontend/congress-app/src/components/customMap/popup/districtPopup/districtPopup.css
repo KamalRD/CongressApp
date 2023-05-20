@@ -1,0 +1,120 @@
+.popupContainer {
+    height: 100%;
+}
+
+.stateInformation {
+    margin: 10% auto;
+    text-align: center;
+}
+
+.popupStateName {
+    font-size: 1.25rem;
+    color: white;
+}
+
+.popupDistrict {
+    font-size: 1rem;
+    color:  #969696;
+}
+
+.stateMember {
+    height: 70%;
+
+}
+
+.memberCard {
+    margin: 5% auto;
+
+    width: 80%;
+    height: 80%;
+
+    border-radius: 6px;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.11),0 2px 2px 0 rgba(0,0,0,.11),0 3px 4px 0 rgba(0,0,0,.11),0 4px 6px 0 rgba(0,0,0,.11),0 4px 10px 0 rgba(0,0,0,.11),0 6px 16px 0 rgba(0,0,0,.11);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.memberCard.Democratic {
+    background: linear-gradient(to top left, rgba(24, 108, 234, .5) 10%, rgba(49, 84, 137, .5) 20%, rgba(39, 54, 76, .5) 30%, rgba(44, 46, 53, 0.5) 50%);
+}
+
+.memberCard.Republican {
+    background: linear-gradient(to top left, rgba(150, 16, 16, .5) 10%, rgba(159, 36, 36, .5) 20%, rgba(108, 42, 42, .5) 30%, rgba(44, 46, 53, 0.5) 50%);
+}
+
+.memberCard.Neutral {
+    background: linear-gradient(to top left, rgba(128, 16, 150, .5) 10%, rgba(96, 26, 110, .5) 20%, rgba(67, 29, 74, .5) 30%, rgba(44, 46, 53, 0.5) 50%);
+}
+
+.memberCard.Democratic:hover {
+    border: 1px solid #186CEA;
+    box-shadow: 0 2px 2px #186CEA;
+    background: linear-gradient(to top left, rgba(24, 108, 234, 1) 10%, rgba(49, 84, 137, 1) 20%, rgba(39, 54, 76, 1) 30%, rgb(13, 14, 15) 50%);
+}
+
+.memberCard.Republican:hover {
+    border: 1px solid #961010;
+    box-shadow: 0 2px 2px #961010;
+    background: linear-gradient(to top left, rgba(150, 16, 16, 1) 10%, rgba(159, 36, 36, 1) 20%, rgba(108, 42, 42, 1), rgb(13, 14, 15) 50%);
+}
+
+.memberCard.Neutral:hover {
+    border: 1px solid #801096;
+    box-shadow: 0 2px 2px #801096;
+    background: linear-gradient(to top left, rgba(128, 16, 150, .5) 10%, rgba(96, 26, 110, .5) 20%, rgba(67, 29, 74, .5) 30%, rgb(13, 14, 15) 50%);
+}
+
+.memberCard > img {
+    margin-top: 5%;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+
+    text-align: center;
+}
+
+.memberCard > .memberName {
+    margin: 2.5% 0%;
+    
+    color: white;
+}
+
+.memberData {
+    margin: 25% 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    text-align: center;
+}
+
+.memberSponsorship {
+    width: 50%;
+}
+
+.memberCosponsorship {
+    width: 50%;
+}
+
+.memberRaising {
+    width: 50%;
+}
+
+.memberData h3 {
+    color: white;
+    font-size: 1rem;
+    
+    margin: auto 0;
+    word-wrap: break-word;
+}
+
+.memberData h4 {
+    color:  #969696;
+    font-size: .75rem;
+    
+    width: 75%;
+    margin: auto auto;
+}

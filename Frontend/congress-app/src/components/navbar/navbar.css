@@ -1,0 +1,44 @@
+.navbarContainer {
+    height: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 1.5rem 0rem;
+    background-color: rgb(23, 24, 28);
+}
+
+.logo {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-left: 10%;
+}
+
+.navbarMenu {
+    margin-left: 40%;
+}
+
+.navbarMenu ul {
+    display: flex;
+    gap: 20px;
+}
+
+.navbarMenu li {
+    list-style-type: none;
+    margin: 0 1rem;
+}
+
+.navbarMenu a {
+    display: block;
+    width: 100%;
+
+    color: #969696;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.navbarMenu a:hover {
+    color: white;
+}
