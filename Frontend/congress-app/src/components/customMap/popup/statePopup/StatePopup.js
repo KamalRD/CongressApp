@@ -23,19 +23,29 @@ function StatePopup(props) {
                     let billInfoBody = await billInformation.json();
 
                     // Get FEC Information
-                    // let fecId = billInfoBody.fecId;
-                    // let senatorFunding = await fetch(`http://localhost:3030/map/fec/${fecId}`);
-                    // let fundingBody = await senatorFunding.json();
-                    // console.log(fundingBody);
+                    let fecId = billInfoBody.fecId;
+                    let senatorFunding = await fetch(`http://localhost:3030/map/fec/${fecId}`);
+                    let fundingBody = await senatorFunding.json();
                     
+                    if (fundingBody.data !== null) {
+                        let totalRaised = new Intl.NumberFormat("en-US", {
+                            style: "currency",
+                            currency: "USD"
+                        }).format(fundingBody.data.total.amount);
 
-                    
-                    
-                    senatorInformation.push({
-                        sponsoredCount: billInfoBody.sponsoredLegislation.count,
-                        cosponsoredCount: billInfoBody.cosponsoredLegislation.count
-                    }); 
+                        senatorInformation.push({
+                            sponsoredCount: billInfoBody.sponsoredLegislation.count,
+                            cosponsoredCount: billInfoBody.cosponsoredLegislation.count,
+                            totalMoneyRaised: totalRaised
+                        }); 
+                    } else {
+                        senatorInformation.push({
+                            sponsoredCount: billInfoBody.sponsoredLegislation.count,
+                            cosponsoredCount: billInfoBody.cosponsoredLegislation.count
+                        }); 
+                    }                   
                 }
+                console.log(senatorInformation);
                 setSenatorInfo(senatorInformation);
                 return senatorInformation;
             }
@@ -60,7 +70,7 @@ function StatePopup(props) {
                                     <h4>Cosponsored Bills</h4>
                                 </div>
                                 <div className="senatorRaising">
-                                    <h3>$</h3>
+                                    <h3>{senatorInformation[index].totalMoneyRaised}</h3>
                                     <h4>Money Raised</h4>
                                 </div>
                             </div>

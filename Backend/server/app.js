@@ -350,7 +350,11 @@ app.get("/map/congress/:id", async (req, res) => {
 app.get("/map/fec/:id", async (req, res) => {
     let fecId = req.params.id;
     let memberFunding = await Funding.find({ "fecId" : fecId });
-    res.json(memberFunding[0]);
+    if (memberFunding.length > 0) {
+        res.json({data : memberFunding[0]});
+    } else {
+        res.json({ data: null})
+    }
 });
 
 // Parties

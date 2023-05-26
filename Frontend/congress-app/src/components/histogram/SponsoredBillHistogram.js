@@ -25,7 +25,7 @@ function SponsoredBillHistogram(props) {
         setMaxValue(Math.max(...billFrequencies));
         setBarWidth(props.width / billFrequencies.length);
         setYAxisValues([maxValue, 3 * maxValue / 4, maxValue / 2, maxValue / 4, 0]);
-    }, [props, billFrequencies, maxValue]);
+    }, [props]);
 
     
     const handleMouseEnter = (event) => {

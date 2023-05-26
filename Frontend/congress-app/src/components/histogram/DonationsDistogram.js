@@ -105,7 +105,7 @@ function DonationsHistogram(props) {
         return () => {
             clearTimeout(timeoutId);
         };
-    }, [props, histogramDataset, historgramLabels])
+    }, [props])
 
     return (
         <>
