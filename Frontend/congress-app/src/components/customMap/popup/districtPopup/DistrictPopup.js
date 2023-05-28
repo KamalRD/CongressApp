@@ -28,7 +28,7 @@ function DistrictPopup(props) {
                 let totalRaised = new Intl.NumberFormat("en-US", {
                     style: "currency",
                     currency: "USD"
-                }).format(fecBodyInfo.total.amount);
+                }).format(fecBodyInfo.data.total.amount);
                 
                 memberInformation.push({
                     sponsoredCount: billInfoBody.sponsoredLegislation.count,

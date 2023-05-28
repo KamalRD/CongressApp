@@ -21,9 +21,8 @@ function Chamber() {
             let allMembersReq = await fetch("http://localhost:3030/chamber");
             let allMembersBody = await allMembersReq.json();
 
-            // let senatorFundingReq = await fetch("http://localhost:3030/chamber/funding/Senate");
-            // let senatorFundingBody = await senatorFundingReq.json();
-            // console.log(senatorFundingBody);
+            let senatorFundingReq = await fetch("http://localhost:3030/chamber/funding/Senate");
+            let senatorFundingBody = await senatorFundingReq.json();
 
             let representativeFundingReq = await fetch("http://localhost:3030/chamber/funding/House");
             let representativeFundingBody = await representativeFundingReq.json();
@@ -40,7 +39,8 @@ function Chamber() {
                     sponsoredBillsPerMember: Math.round(allMembersBody.filter(member => member.chamber === "Senate").map(member => member.sponsoredLegislation.count).reduce((acc, cur) => acc + cur, 0) / allMembersBody.filter(member => member.chamber === "Senate").length),
                     cosponsoredBills: allMembersBody.filter(member => member.chamber === "Senate").map(member => member.cosponsoredLegislation.count).reduce((acc, cur) => acc + cur, 0),
                     cosponsoredBillsPerMember: Math.round(allMembersBody.filter(member => member.chamber === "Senate").map(member => member.cosponsoredLegislation.count).reduce((acc, cur) => acc + cur, 0) / allMembersBody.filter(member => member.chamber === "Senate").length),
-                }
+                },
+                funding: senatorFundingBody
             };
 
             let tempRepresentatives = {
@@ -109,6 +109,9 @@ function Chamber() {
                             <h3>{numberWithCommas(senators.bills?.cosponsoredBillsPerMember)}</h3>
                             <h4>Cosponsored Bills per Member</h4>
                         </div>
+                    </div>
+                    <div className="fundingInformation partyCard">
+                        <DonutChart funding={senators.funding}></DonutChart>
                     </div>
                 </div>
                 <div className="houseContainer">

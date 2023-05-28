@@ -6,7 +6,6 @@ function StatePopup(props) {
     const [ stateName, setStateName ] = useState("");
     const [ stateCapital, setStateCapital ] = useState("");
     const [ senatorCards, setSenatorCards ] = useState([]);
-    const [ senatorInfo, setSenatorInfo ] = useState([]);
 
     useEffect(() => {
         if (props.currentHover?.senators !== undefined) {
@@ -45,8 +44,6 @@ function StatePopup(props) {
                         }); 
                     }                   
                 }
-                console.log(senatorInformation);
-                setSenatorInfo(senatorInformation);
                 return senatorInformation;
             }
             

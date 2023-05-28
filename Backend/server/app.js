@@ -368,11 +368,6 @@ app.get("/parties/funding/:party", async (req, res) => {
     let allPartyMembers = (await Member.find({ party: party })).map(members => members.fecId);
     let allFundingInfo = await Funding.find({ fecId: allPartyMembers});
 
-    if (party === "Independent") {
-        console.log(allPartyMembers);
-        console.log(allFundingInfo);
-    }
-
     res.json(buildAggregateDonutChartData(allFundingInfo));
 })
 

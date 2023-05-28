@@ -19,11 +19,13 @@
 
 .stateReps {
     height: 70%;
-
-}
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+} 
 
 .senatorCard {
-    margin: 5% auto;
+    margin: 2.5% auto;
 
     width: 80%;
     height: 50%;
@@ -83,7 +85,7 @@
 }
 
 .senatorData {
-    margin: 10% auto;
+    margin: 5% auto;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
